@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import Board from '../containers/Board';
 
-class App extends React.Component {
-    render() {
-        return <div>Hello World!</div>;
-    }
-}
+
+const App = () => (
+    <Board />
+);
 
 export default App;
