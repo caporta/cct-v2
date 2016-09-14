@@ -3,7 +3,10 @@ import ReactDOM from 'react-dom';
 
 
 const Board = () => (
-    <div>Hello World!</div>
+    <div
+        className={'board'}
+    >
+    </div>
 );
 
 export default Board;

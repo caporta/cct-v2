@@ -1,0 +1,13 @@
+@import url('reset.css');
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+
+.board {
+    width: 600px;
+    height: 600px;
+    margin: 0 auto;
+    border: 1px solid red;
+}
