@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Board from '../containers/Board';
+import Table from './Table';
 
 
 const App = () => (
-    <Board />
+    <Table />
 );
 
 export default App;
