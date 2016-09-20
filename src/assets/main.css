@@ -17,8 +17,17 @@
     border: 1px solid red;
 }
 
-.panel-left,
-.panel-right {
+.panel {
     width: 150px;
+    border: 1px solid red;
+}
+
+.panel__left .box {
+    height: 33.33%;
+    border: 1px solid red;
+}
+
+.panel__right .box {
+    height: 50%;
     border: 1px solid red;
 }
