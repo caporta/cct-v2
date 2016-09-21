@@ -17,6 +17,49 @@
     border: 1px solid red;
 }
 
+.square {
+    display: inline-block;
+    float: left;
+    width: 12.5%;
+    height: 12.5%;
+    border: 1px solid red;
+}
+
+.square:nth-child(2),
+.square:nth-child(4),
+.square:nth-child(6),
+.square:nth-child(8),
+.square:nth-child(9),
+.square:nth-child(11),
+.square:nth-child(13),
+.square:nth-child(15),
+.square:nth-child(18),
+.square:nth-child(20),
+.square:nth-child(22),
+.square:nth-child(24),
+.square:nth-child(25),
+.square:nth-child(27),
+.square:nth-child(29),
+.square:nth-child(31),
+.square:nth-child(34),
+.square:nth-child(36),
+.square:nth-child(38),
+.square:nth-child(40),
+.square:nth-child(41),
+.square:nth-child(43),
+.square:nth-child(45),
+.square:nth-child(47),
+.square:nth-child(50),
+.square:nth-child(52),
+.square:nth-child(54),
+.square:nth-child(56),
+.square:nth-child(57),
+.square:nth-child(59),
+.square:nth-child(61),
+.square:nth-child(63) {
+    background: #333;
+}
+
 .panel {
     width: 150px;
     border: 1px solid red;
