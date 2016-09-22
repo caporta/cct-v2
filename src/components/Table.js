@@ -6,12 +6,12 @@ import PanelLeft from './PanelLeft';
 import PanelRight from './PanelRight';
 
 
-const Table = () => (
+const Table = ({ coordinates }) => (
     <div
         className={'table'}
     >
         <PanelLeft />
-        <Board />
+        <Board coordinates={coordinates}/>
         <PanelRight />
     </div>
 );

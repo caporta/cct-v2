@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const Square = ({ coordinate }) => (
+const Square = ({ coordinate, id }) => (
     <div
         className={'square'}
-        id={coordinate}
+        id={id}
     >
     </div>
 );

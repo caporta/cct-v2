@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Table from './Table';
+import Game from '../containers/Game.js';
 
 
 const App = () => (
-    <Table />
+    <Game />
 );
 
 export default App;
