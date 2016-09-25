@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
-import Table from '../components/Table.js';
+import Table from '../components/Table';
 
 
 export default class Game extends Component {

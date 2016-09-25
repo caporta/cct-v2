@@ -1,11 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import SideSelect from './SideSelect';
+
+
 const SideBox = () => (
     <div
         className={'box box__side'}
     >
-        Side Box
+        <SideSelect />
     </div>
 );
 
