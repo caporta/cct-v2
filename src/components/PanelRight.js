@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import CoordinateBox from './CoordinateBox';
 import ScoreBox from './ScoreBox';

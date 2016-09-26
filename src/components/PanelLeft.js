@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import StartBox from './StartBox';
 import SideBox from './SideBox';
