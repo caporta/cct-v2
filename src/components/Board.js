@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
-import Square from './Square.js';
+import Square from './Square';
 
 
 const Board = ({ coordinates }) => (

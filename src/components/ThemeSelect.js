@@ -2,9 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 
-const ThemeSelect = () => (
+const ThemeSelect = ({ themes }) => (
     <div>
-        <select></select>
+        <select>
+            {themes().map(theme =>
+                <option key={themes().indexOf(theme)} value={theme}>{theme}</option>
+            )}
+        </select>
     </div>
 );
 

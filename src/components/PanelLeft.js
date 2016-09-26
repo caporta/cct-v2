@@ -1,17 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import StartBox from './StartBox.js';
-import SideBox from './SideBox.js';
-import ThemeBox from './ThemeBox.js';
+import StartBox from './StartBox';
+import SideBox from './SideBox';
+import ThemeBox from './ThemeBox';
 
-const PanelLeft = () => (
+const PanelLeft = ({ sides, themes }) => (
     <div
         className={'panel panel__left'}
     >
         <StartBox />
-        <SideBox />
-        <ThemeBox />
+        <SideBox sides={sides} />
+        <ThemeBox themes={themes} />
     </div>
 );
 

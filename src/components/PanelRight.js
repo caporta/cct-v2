@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import CoordinateBox from './CoordinateBox.js';
-import ScoreBox from './ScoreBox.js';
+import CoordinateBox from './CoordinateBox';
+import ScoreBox from './ScoreBox';
 
 const PanelRight = () => (
     <div

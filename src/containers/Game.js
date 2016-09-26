@@ -18,9 +18,21 @@ export default class Game extends Component {
         ];
     }
 
+    sides() {
+        return ['white', 'black', 'random'];
+    }
+
+    themes() {
+        return ['modern'];
+    }
+
     render() {
         return (
-            <Table coordinates={this.coordinates.bind(this)} />
+            <Table
+                coordinates={this.coordinates.bind(this)}
+                sides={this.sides.bind(this)}
+                themes={this.themes.bind(this)}
+            />
         );
     }
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Game from '../containers/Game.js';
+import Game from '../containers/Game';
 
 
 const App = () => (

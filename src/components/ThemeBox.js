@@ -4,11 +4,11 @@ import ReactDOM from 'react-dom';
 import ThemeSelect from './ThemeSelect';
 
 
-const ThemeBox = () => (
+const ThemeBox = ({ themes }) => (
     <div
         className={'box box__theme'}
     >
-        <ThemeSelect />
+        <ThemeSelect themes={themes} />
     </div>
 );
 
