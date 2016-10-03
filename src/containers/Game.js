@@ -18,7 +18,7 @@ export default class Game extends Component {
     }
 
     sides() {
-        return ['white', 'black', 'random'];
+        return ['white', 'black'];
     }
 
     themes() {
