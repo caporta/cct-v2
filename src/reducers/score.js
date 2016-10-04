@@ -1,6 +1,6 @@
 const score = (state = 0, action) => {
     switch (action.type) {
-        case 'INCREMENT':
+        case 'INCREMENT_SCORE':
             return state + 1;
         default:
             return state;

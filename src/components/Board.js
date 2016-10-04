@@ -20,7 +20,7 @@ class Board extends Component {
         const { store } = this.context;
         const state = store.getState();
 
-        return state.side.color == 'black'
+        return state.side == 'black'
             ? props.coordinates().reverse()
             : props.coordinates();
     }

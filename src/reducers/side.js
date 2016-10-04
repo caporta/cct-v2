@@ -1,9 +1,7 @@
-const side = (state = { color: 'white' }, action) => {
+const side = (state = 'white', action) => {
     switch (action.type) {
         case 'TOGGLE_SIDE':
-            return Object.assign({}, state, {
-                color: action.color
-            });
+            return action.side
         default:
             return state;
     }

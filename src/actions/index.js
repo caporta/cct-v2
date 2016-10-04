@@ -1,4 +1,12 @@
-export const toggleSide = (color) => ({
+export const toggleSide = (side) => ({
     type: 'TOGGLE_SIDE',
-    color
+    side
+});
+
+export const incrementScore = () => ({
+    type: 'INCREMENT_SCORE'
+});
+
+export const toggleGame = () => ({
+    type: 'TOGGLE_GAME'
 });
