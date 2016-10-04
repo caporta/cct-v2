@@ -1,4 +1,4 @@
-export const toggleSide = (side) => ({
+export const toggleSide = (color) => ({
     type: 'TOGGLE_SIDE',
-    side
+    color
 });

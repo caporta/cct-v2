@@ -1,16 +1,12 @@
-const initialState = {
-    side: 'white'
-};
-
-const sideSelector = (state = initialState, action) => {
+const side = (state = { color: 'white' }, action) => {
     switch (action.type) {
         case 'TOGGLE_SIDE':
             return Object.assign({}, state, {
-                side: action.side
+                color: action.color
             });
         default:
             return state;
     }
 };
 
-export default sideSelector;
+export default side;

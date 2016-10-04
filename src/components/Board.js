@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 
 import Square from './Square';
 
@@ -20,7 +20,7 @@ class Board extends Component {
         const { store } = this.context;
         const state = store.getState();
 
-        return state.sideSelector.side == 'black'
+        return state.side.color == 'black'
             ? props.coordinates().reverse()
             : props.coordinates();
     }
@@ -39,7 +39,7 @@ class Board extends Component {
     }
 }
 Board.contextTypes = {
-    store: React.PropTypes.object
+    store: PropTypes.object
 };
 
 export default Board;

@@ -1,10 +1,12 @@
 import { combineReducers } from 'redux';
 
-import sideSelector from './sideSelector';
+import score from './score';
+import side from './side';
 
 
 const rootReducer = combineReducers({
-    sideSelector
+    score,
+    side
 });
 
 export default rootReducer;
