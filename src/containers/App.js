@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import Table from '../components/Table';
 
 
-export default class Game extends Component {
+class App extends Component {
     coordinates() {
         return [
             'a8', 'b8', 'c8', 'd8', 'e8', 'f8', 'g8', 'h8',
@@ -36,3 +36,4 @@ export default class Game extends Component {
     }
 }
 
+export default App;
