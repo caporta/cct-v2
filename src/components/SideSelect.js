@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
 import { toggleSide } from '../actions/index';
 
@@ -22,7 +22,7 @@ const SideSelect = ({ sides }, { store }) => (
     </div>
 );
 SideSelect.contextTypes = {
-    store: React.PropTypes.object
+    store: PropTypes.object
 };
 
 export default SideSelect;
