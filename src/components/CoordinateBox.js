@@ -4,7 +4,7 @@ const CoordinateBox = () => (
     <div
         className={'box box__coordinate'}
     >
-        Coordinate Box
+        Coordinate:
     </div>
 );
 

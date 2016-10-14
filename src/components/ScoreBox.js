@@ -6,7 +6,7 @@ const ScoreBox = () => (
     <div
         className={'box box__score'}
     >
-        Score Box
+        Final Score:
         <ScoreDisplay />
     </div>
 );

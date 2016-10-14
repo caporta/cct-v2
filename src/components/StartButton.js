@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 
-import { toggleGame } from '../actions/index';
+import { toggleGame, resetScore } from '../actions/index';
 
 
 class StartButton extends Component {
@@ -17,6 +17,7 @@ class StartButton extends Component {
     deactivateGame(store, timeout) {
         setTimeout(() => {
             store.dispatch(toggleGame())
+            store.dispatch(resetScore())
         }, timeout)
     }
 

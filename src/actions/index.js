@@ -3,10 +3,14 @@ export const toggleSide = (side) => ({
     side
 });
 
+export const toggleGame = () => ({
+    type: 'TOGGLE_GAME'
+});
+
 export const incrementScore = () => ({
     type: 'INCREMENT_SCORE'
 });
 
-export const toggleGame = () => ({
-    type: 'TOGGLE_GAME'
+export const resetScore = () => ({
+    type: 'RESET_SCORE'
 });

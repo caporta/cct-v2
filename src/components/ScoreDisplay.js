@@ -14,8 +14,11 @@ class ScoreDisplay extends Component {
     }
 
     render() {
+        const { store } = this.context;
+        const state = store.getState();
+        let finalScore = !state.game.active ? state.score : ''
         return (
-            <div>#</div>
+            <div>{finalScore}</div>
         );
     }
 }
