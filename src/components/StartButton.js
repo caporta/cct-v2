@@ -14,6 +14,10 @@ class StartButton extends Component {
         this.unsubscribe();
     }
 
+    activateGame(store) {
+        store.dispatch(toggleGame());
+    }
+
     deactivateGame(store, timeout) {
         setTimeout(() => {
             store.dispatch(toggleGame())
@@ -31,7 +35,7 @@ class StartButton extends Component {
                     disabled={disabled}
                     className={'button button__start'}
                     onClick={(e) => {
-                        store.dispatch(toggleGame())
+                        this.activateGame(store)
                         this.deactivateGame(store, 2000)
                     }}
                 >
