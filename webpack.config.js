@@ -1,22 +1,35 @@
+var Webpack = require('webpack'),
+    HtmlWebpackPlugin = require('html-webpack-plugin'),
+    path = require('path'),
+    buildPath = path.resolve(__dirname, 'build'),
+    mainPath = path.resolve(__dirname, 'src', 'index.js');
+
+
 module.exports = {
-    entry: './src/index.js',
+    devtool: 'eval',
+    entry: mainPath,
     output: {
-        path: './build/',
-        filename: 'bundle.js'
+        path: buildPath,
+        filename: 'bundle.js',
+        publicPath: buildPath
     },
-    devServer: {
-        inline: true,
-        port: 7890
-    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            hash: true,
+            filename: 'index.html',
+            template: 'src/index.html'
+        })
+    ],
     module: {
         loaders: [
             {
-                loader: 'babel',
+                loaders: ['babel'],
                 test: /\.js$/,
-                exclude: /node_modules/,
-                query: {
-                    presets: ['es2015', 'react']
-                }
+                exclude: /node_modules/
+            },
+            {
+                loader: 'style!css',
+                test: /\.css$/
             }
         ]
     }
