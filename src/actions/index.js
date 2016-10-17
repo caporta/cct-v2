@@ -14,3 +14,8 @@ export const incrementScore = () => ({
 export const resetScore = () => ({
     type: 'RESET_SCORE'
 });
+
+export const updateCoordinate = (newCoordinate) => ({
+    type: 'UPDATE_COORDINATE',
+    newCoordinate
+});
