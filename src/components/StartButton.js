@@ -30,7 +30,6 @@ class StartButton extends Component {
     }
 
     render() {
-        const props = this.props;
         const { store } = this.context;
         const state = store.getState();
         let disabled = state.game.active ? 'disabled' : ''
