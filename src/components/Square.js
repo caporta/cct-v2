@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 
-import { updateCoordinate } from '../actions/index';
+import { updateCoordinate, incrementScore } from '../actions/index';
 import { getRandomCoordinate } from '../utilities/index';
 
 
@@ -34,9 +34,10 @@ class Square extends Component {
                 id={props.id}
                 onClick={(e) => {
                     this.getMatch()
-                    this.getMatch() && state.game.active
-                        ? store.dispatch(updateCoordinate(coordinate))
-                        : console.log('nope')
+                    if (this.getMatch() && state.game.active) {
+                        store.dispatch(updateCoordinate(coordinate))
+                        store.dispatch(incrementScore());
+                    }
                 }}
             >
             </div>

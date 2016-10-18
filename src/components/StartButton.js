@@ -18,6 +18,7 @@ class StartButton extends Component {
     activateGame(store) {
         const props = this.props;
         let coordinate = getRandomCoordinate(props.coordinates());
+        store.dispatch(resetScore())
         store.dispatch(toggleGame());
         store.dispatch(updateCoordinate(coordinate));
     }
@@ -25,7 +26,6 @@ class StartButton extends Component {
     deactivateGame(store, timeout) {
         setTimeout(() => {
             store.dispatch(toggleGame())
-            store.dispatch(resetScore())
         }, timeout)
     }
 
