@@ -3,11 +3,11 @@ import React from 'react';
 import StartButton from './StartButton';
 
 
-const StartBox = () => (
+const StartBox = ({ coordinates }) => (
     <div
         className={'box box__start'}
     >
-        <StartButton />
+        <StartButton coordinates={coordinates} />
     </div>
 );
 

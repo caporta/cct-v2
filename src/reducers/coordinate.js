@@ -7,4 +7,4 @@ const coordinate = (state = '', action) => {
     }
 }
 
-export default score;
+export default coordinate;

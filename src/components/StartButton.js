@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 
-import { toggleGame, resetScore } from '../actions/index';
+import { toggleGame, resetScore, updateCoordinate } from '../actions/index';
+import { getRandomCoordinate } from '../utilities/index';
 
 
 class StartButton extends Component {
@@ -15,7 +16,10 @@ class StartButton extends Component {
     }
 
     activateGame(store) {
+        const props = this.props;
+        let coordinate = getRandomCoordinate(props.coordinates());
         store.dispatch(toggleGame());
+        store.dispatch(updateCoordinate(coordinate));
     }
 
     deactivateGame(store, timeout) {
@@ -26,6 +30,7 @@ class StartButton extends Component {
     }
 
     render() {
+        const props = this.props;
         const { store } = this.context;
         const state = store.getState();
         let disabled = state.game.active ? 'disabled' : ''

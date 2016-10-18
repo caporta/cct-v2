@@ -4,11 +4,11 @@ import StartBox from './StartBox';
 import SideBox from './SideBox';
 import ThemeBox from './ThemeBox';
 
-const PanelLeft = ({ sides, themes }) => (
+const PanelLeft = ({ coordinates, sides, themes }) => (
     <div
         className={'panel panel__left'}
     >
-        <StartBox />
+        <StartBox coordinates={coordinates} />
         <SideBox sides={sides} />
         <ThemeBox themes={themes} />
     </div>

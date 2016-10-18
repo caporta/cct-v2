@@ -9,7 +9,10 @@ const Table = ({ coordinates, sides, themes }) => (
     <div
         className={'table'}
     >
-        <PanelLeft sides={sides} themes={themes} />
+        <PanelLeft
+            coordinates={coordinates}
+            sides={sides}
+            themes={themes} />
         <Board coordinates={coordinates} />
         <PanelRight />
     </div>
