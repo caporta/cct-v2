@@ -32,7 +32,10 @@ class Board extends Component {
                 className={'board'}
             >
                 {coordinates.map(coordinate =>
-                    <Square key={coordinates.indexOf(coordinate)} id={coordinate} />
+                    <Square
+                        key={coordinates.indexOf(coordinate)}
+                        id={coordinate}
+                    />
                 )}
             </div>
         );
