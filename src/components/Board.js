@@ -35,6 +35,7 @@ class Board extends Component {
                     <Square
                         key={coordinates.indexOf(coordinate)}
                         id={coordinate}
+                        coordinates={coordinates}
                     />
                 )}
             </div>

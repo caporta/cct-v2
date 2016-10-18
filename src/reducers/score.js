@@ -1,4 +1,4 @@
-const score = (state = 0, action) => {
+const score = (state = null, action) => {
     switch (action.type) {
         case 'INCREMENT_SCORE':
             return state + 1;

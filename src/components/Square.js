@@ -1,5 +1,8 @@
 import React, { Component, PropTypes } from 'react';
 
+import { updateCoordinate } from '../actions/index';
+import { getRandomCoordinate } from '../utilities/index';
+
 
 class Square extends Component {
     componentDidMount() {
@@ -22,13 +25,19 @@ class Square extends Component {
 
     render() {
         const props = this.props;
+        const { store } = this.context;
+        const state = store.getState();
+        let coordinate = getRandomCoordinate(props.coordinates)
         return(
             <div
                 className={'square'}
                 id={props.id}
-                onClick={(e) =>
+                onClick={(e) => {
                     this.getMatch()
-                }
+                    this.getMatch() && state.game.active
+                        ? store.dispatch(updateCoordinate(coordinate))
+                        : console.log('nope')
+                }}
             >
             </div>
         );
