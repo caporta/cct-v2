@@ -19,3 +19,7 @@ export const updateCoordinate = (newCoordinate) => ({
     type: 'UPDATE_COORDINATE',
     newCoordinate
 });
+
+export const resetCoordinate = () => ({
+    type: 'RESET_COORDINATE'
+});
