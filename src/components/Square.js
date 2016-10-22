@@ -10,7 +10,7 @@ class Square extends Component {
         this.state = {
             className: 'square'
         }
-        this.initialState = this.state;
+        this.initialLocalState = this.state;
     }
 
     componentDidMount() {
@@ -26,7 +26,7 @@ class Square extends Component {
 
     resetLocalState(timeout) {
         setTimeout(() =>
-            this.setState(this.initialState)
+            this.setState(this.initialLocalState)
         , timeout)
     }
 
