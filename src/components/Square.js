@@ -57,6 +57,7 @@ class Square extends Component {
                             this.setState({ className: localState.className + ' incorrect'});
                         }
                     }
+                    // timeout should match keyframe animation-duration in main.css
                     resetLocalState(800);
                 }}
             >
