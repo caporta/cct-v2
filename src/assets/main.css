@@ -22,7 +22,6 @@
     float: left;
     width: 12.5%;
     height: 12.5%;
-    border: 1px solid red;
 }
 
 .square:nth-child(18),
@@ -236,4 +235,30 @@ Piece Styles
     center / 90% 90%
     no-repeat
     #fbfbfb;
+}
+
+.correct {
+    animation: show-correct 0.8s ease-in-out;
+}
+
+.incorrect {
+    animation: show-incorrect 0.8s ease-in-out;
+}
+
+@keyframes show-correct {
+    50% {
+        box-shadow: inset 0 0 0 6px green;
+    }
+    100% {
+        box-shadow: none;
+    }
+}
+
+@keyframes show-incorrect {
+    50% {
+        box-shadow: inset 0 0 0 6px red;
+    }
+    100% {
+        box-shadow: none;
+    }
 }

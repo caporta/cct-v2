@@ -5,6 +5,14 @@ import { getRandomCoordinate } from '../utilities/index';
 
 
 class Square extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            className: 'square'
+        }
+        this.initialState = this.state;
+    }
+
     componentDidMount() {
         const { store } = this.context;
         this.unsubscribe = store.subscribe(() =>
@@ -14,6 +22,12 @@ class Square extends Component {
 
     componentWillUnmount() {
         this.unsubscribe();
+    }
+
+    resetLocalState(timeout) {
+        setTimeout(() =>
+            this.setState(this.initialState)
+        , timeout)
     }
 
     getMatch() {
@@ -26,18 +40,24 @@ class Square extends Component {
     render() {
         const props = this.props;
         const { store } = this.context;
+        const localState = this.state;
         const state = store.getState();
-        let coordinate = getRandomCoordinate(props.coordinates)
+        let coordinate = getRandomCoordinate(props.coordinates);
         return(
             <div
-                className={'square'}
+                className={this.state.className}
                 id={props.id}
                 onClick={(e) => {
-                    this.getMatch()
-                    if (this.getMatch() && state.game.active) {
-                        store.dispatch(updateCoordinate(coordinate))
-                        store.dispatch(incrementScore());
+                    if (state.game.active) {
+                        if (this.getMatch()) {
+                            store.dispatch(updateCoordinate(coordinate))
+                            store.dispatch(incrementScore());
+                            this.setState({ className: localState.className + ' correct'});
+                        } else {
+                            this.setState({ className: localState.className + ' incorrect'});
+                        }
                     }
+                    resetLocalState(800);
                 }}
             >
             </div>
