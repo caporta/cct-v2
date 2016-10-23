@@ -4,12 +4,25 @@
     box-sizing: border-box;
 }
 
+.game {
+    width: 900px;
+    height: 615px;
+    margin: 0 auto;
+}
+
 .table {
     display: flex;
-    width: 900px;
+    width: 100%;
     height: 600px;
     margin: 0 auto;
     border: 1px solid black;
+}
+
+.bar__progress {
+    width: 100%;
+    height: 15px;
+    background: repeating-linear-gradient(-45deg, rgba(255,255,255,.1), rgba(255,255,255,0) 12px), linear-gradient(#5fcf80,#5faa70);
+    border: 2px solid black;
 }
 
 .board {
@@ -274,6 +287,10 @@ Piece Styles
     animation: show-incorrect 0.8s ease-in-out;
 }
 
+.bar__progress--active {
+    animation: prog-slide 30s linear;
+}
+
 @keyframes show-correct {
     10% {
         box-shadow: inset 0 0 0 6px green;
@@ -289,5 +306,14 @@ Piece Styles
     }
     100% {
         box-shadow: none;
+    }
+}
+
+@keyframes prog-slide {
+    0% {
+        width: 0px;
+    }
+    100% {
+        width: 900px 
     }
 }

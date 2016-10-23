@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Board from './Board';
 import PanelLeft from './PanelLeft';
+import Board from './Board';
 import PanelRight from './PanelRight';
 
 

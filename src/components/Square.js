@@ -58,7 +58,7 @@ class Square extends Component {
                         }
                     }
                     // timeout should match keyframe animation-duration in main.css
-                    resetLocalState(800);
+                    this.resetLocalState(800);
                 }}
             >
             </div>

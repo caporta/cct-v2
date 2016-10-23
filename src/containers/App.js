@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import Table from '../components/Table';
+import ProgressBar from '../components/ProgressBar';
 
 
 class App extends Component {
@@ -27,11 +28,14 @@ class App extends Component {
 
     render() {
         return (
-            <Table
-                coordinates={this.coordinates.bind(this)}
-                sides={this.sides.bind(this)}
-                themes={this.themes.bind(this)}
-            />
+            <div className={'game'}>
+                <Table
+                    coordinates={this.coordinates.bind(this)}
+                    sides={this.sides.bind(this)}
+                    themes={this.themes.bind(this)}
+                />
+                <ProgressBar />
+            </div>
         );
     }
 }

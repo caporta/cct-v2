@@ -41,7 +41,7 @@ class StartButton extends Component {
                     className={'button button__start'}
                     onClick={(e) => {
                         this.activateGame(store)
-                        this.deactivateGame(store, 10000)
+                        this.deactivateGame(store, 30000)
                     }}
                 >
                     Start
