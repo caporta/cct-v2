@@ -1,6 +1,6 @@
 import React from 'react';
 
-import CoordinateDisplay from './coordinateDisplay';
+import CoordinateContainer from '../containers/CoordinateContainer';
 
 
 const CoordinateBox = () => (
@@ -8,7 +8,7 @@ const CoordinateBox = () => (
         className={'box box__coordinate'}
     >
         Coordinate:
-        <CoordinateDisplay />
+        <CoordinateContainer />
     </div>
 );
 
