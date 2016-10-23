@@ -1,7 +1,7 @@
 import React from 'react';
 
 import PanelLeft from './PanelLeft';
-import Board from './Board';
+import BoardContainer from '../containers/BoardContainer';
 import PanelRight from './PanelRight';
 
 
@@ -13,7 +13,7 @@ const Table = ({ coordinates, sides, themes }) => (
             coordinates={coordinates}
             sides={sides}
             themes={themes} />
-        <Board coordinates={coordinates} />
+        <BoardContainer coordinates={coordinates} />
         <PanelRight />
     </div>
 );
