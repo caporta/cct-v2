@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import Table from '../components/Table';
-import ProgressBar from '../components/ProgressBar';
+import Table from './Table';
+import ProgressContainer from '../containers/ProgressContainer';
 
 
 class App extends Component {
@@ -34,7 +34,7 @@ class App extends Component {
                     sides={this.sides.bind(this)}
                     themes={this.themes.bind(this)}
                 />
-                <ProgressBar />
+                <ProgressContainer />
             </div>
         );
     }
