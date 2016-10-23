@@ -7,6 +7,7 @@ const SideBox = ({ sides }) => (
     <div
         className={'box box__side'}
     >
+        Choose Side:
         <SideSelect sides={sides} />
     </div>
 );

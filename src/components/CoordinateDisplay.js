@@ -16,7 +16,9 @@ class CoordinateDisplay extends Component {
         const { store } = this.context;
         const state = store.getState();
         return (
-            <div>{state.coordinate}</div>
+            <div className={'display display__coordinate'}>
+                {state.coordinate}
+            </div>
         );
     }
 }

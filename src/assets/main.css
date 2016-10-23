@@ -9,12 +9,12 @@
     width: 900px;
     height: 600px;
     margin: 0 auto;
-    border: 1px solid red;
+    border: 1px solid black;
 }
 
 .board {
     width: 600px;
-    border: 1px solid red;
+    border: 1px solid black;
 }
 
 .square {
@@ -45,17 +45,46 @@
 
 .panel {
     width: 150px;
-    border: 1px solid red;
+    border: 1px solid black;
+    color: #fbfbfb;
+    text-align: center;
+}
+
+.panel__left {
+    background-image: linear-gradient(45deg, #212121 10%, rgba(200,200,200,1));
+}
+
+.panel__right {
+    background-image: linear-gradient(225deg, #212121 10%, rgba(200,200,200,1));
 }
 
 .panel__left .box {
     height: 33.33%;
-    border: 1px solid red;
+    padding-top: 40%;
+    border: 1px solid black;
 }
 
 .panel__right .box {
     height: 50%;
-    border: 1px solid red;
+    padding-top: 40%;
+    border: 1px solid black;
+}
+
+.select {
+    margin-top: 10%;
+}
+
+.display {
+    margin-top: 40%;
+    font-size: 1.8em;
+}
+
+.button {
+    margin-top: 20%;
+}
+
+.display__score {
+    color: gold;
 }
 
 /*

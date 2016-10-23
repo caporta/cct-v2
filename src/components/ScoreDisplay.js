@@ -18,7 +18,9 @@ class ScoreDisplay extends Component {
         const state = store.getState();
         let finalScore = !state.game.active ? state.score : null
         return (
-            <div>{finalScore}</div>
+            <div className={'display display__score'}>
+                {finalScore}
+            </div>
         );
     }
 }

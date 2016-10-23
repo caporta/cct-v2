@@ -7,6 +7,7 @@ const ThemeBox = ({ themes }) => (
     <div
         className={'box box__theme'}
     >
+        Choose Theme:
         <ThemeSelect themes={themes} />
     </div>
 );

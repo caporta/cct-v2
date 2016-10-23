@@ -23,6 +23,7 @@ class SideSelect extends Component {
         return (
             <div>
                 <select
+                    className={'select select__side'}
                     disabled={disabled}
                     onChange={(e) =>
                         store.dispatch(toggleSide(e.target.value))
