@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ScoreDisplay from './scoreDisplay';
+import ScoreContainer from '../containers/ScoreContainer';
 
 
 const ScoreBox = () => (
@@ -8,7 +8,7 @@ const ScoreBox = () => (
         className={'box box__score'}
     >
         Final Score:
-        <ScoreDisplay />
+        <ScoreContainer />
     </div>
 );
 

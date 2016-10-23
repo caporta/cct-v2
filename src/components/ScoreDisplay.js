@@ -1,31 +1,13 @@
-import React, { Component, PropTypes } from 'react';
+import React from 'react';
 
 
-class ScoreDisplay extends Component {
-    componentDidMount() {
-        const { store } = this.context;
-        this.unsubscribe = store.subscribe(() =>
-            this.forceUpdate()
-        );
-    }
-
-    componentWillUnmount() {
-        this.unsubscribe();
-    }
-
-    render() {
-        const { store } = this.context;
-        const state = store.getState();
-        let finalScore = !state.game.active ? state.score : null
-        return (
-            <div className={'display display__score'}>
-                {finalScore}
-            </div>
-        );
-    }
-}
-ScoreDisplay.contextTypes = {
-    store: PropTypes.object
+const ScoreDisplay = ({ active, score }) => {
+    let finalScore = !active ? score : null
+    return (
+        <div className={'display display__score'}>
+            {finalScore}
+        </div>
+    );
 };
 
 export default ScoreDisplay;
