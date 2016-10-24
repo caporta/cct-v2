@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Square from './Square';
+import SquareContainer from '../containers/SquareContainer';
 
 
 class Board extends Component {
@@ -18,7 +18,7 @@ class Board extends Component {
                 className={'board'}
             >
                 {coordinates.map(coordinate =>
-                    <Square
+                    <SquareContainer
                         key={coordinates.indexOf(coordinate)}
                         id={coordinate}
                         coordinates={coordinates}
