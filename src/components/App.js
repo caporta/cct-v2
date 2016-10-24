@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 
-import Table from './Table';
+import StartContainer from '../containers/StartContainer';
+import SideSelect from './SideSelect';
+import ThemeSelect from './ThemeSelect';
+import BoardContainer from '../containers/BoardContainer';
+import ScoreContainer from '../containers/ScoreContainer';
+import CoordinateContainer from '../containers/CoordinateContainer';
 import ProgressContainer from '../containers/ProgressContainer';
 
 
@@ -29,12 +34,45 @@ class App extends Component {
     render() {
         return (
             <div className={'game'}>
-                <Table
-                    coordinates={this.coordinates.bind(this)}
-                    sides={this.sides.bind(this)}
-                    themes={this.themes.bind(this)}
-                />
+                <div className={'table'}>
+                    <div className={'panel panel__left'}>
+
+                        <div className={'box box__start'}>
+                            <StartContainer coordinates={this.coordinates.bind(this)} />
+                        </div>
+
+                        <div className={'box box__side'}>
+                            Choose Side:
+                            <SideSelect sides={this.sides.bind(this)} />
+                        </div>
+
+                        <div className={'box box__theme'}>
+                            Choose Theme:
+                            <ThemeSelect themes={this.themes.bind(this)} />
+                        </div>
+
+                    </div>
+
+                    <BoardContainer coordinates={this.coordinates.bind(this)} />
+
+                    <div className={'panel panel__right'}>
+
+                        <div className={'box box__coordinate'}>
+                            Coordinate:
+                            <CoordinateContainer />
+                        </div>
+
+                        <div className={'box box__score'}>
+                            Final Score:
+                            <ScoreContainer />
+                        </div>
+
+                    </div>
+
+                </div>
+
                 <ProgressContainer />
+
             </div>
         );
     }
