@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import StartContainer from '../containers/StartContainer';
-import SideSelect from './SideSelect';
+import SideContainer from '../containers/SideContainer';
 import ThemeSelect from './ThemeSelect';
 import BoardContainer from '../containers/BoardContainer';
 import ScoreContainer from '../containers/ScoreContainer';
@@ -43,7 +43,7 @@ class App extends Component {
 
                         <div className={'box box__side'}>
                             Choose Side:
-                            <SideSelect sides={this.sides.bind(this)} />
+                            <SideContainer sides={this.sides.bind(this)} />
                         </div>
 
                         <div className={'box box__theme'}>
