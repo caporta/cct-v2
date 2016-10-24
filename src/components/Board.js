@@ -5,10 +5,10 @@ import Square from './Square';
 
 class Board extends Component {
     setCoordinates() {
-        const props = this.props;
-        return props.side == 'black'
-            ? props.coordinates().reverse()
-            : props.coordinates();
+        const { side, coordinates } = this.props;
+        return side == 'black'
+            ? coordinates().reverse()
+            : coordinates();
     }
 
     render() {

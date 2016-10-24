@@ -5,43 +5,33 @@ import { getRandomCoordinate } from '../utilities/index';
 
 
 class StartButton extends Component {
-    componentDidMount() {
-        const { store } = this.context;
-        this.unsubscribe = store.subscribe(() =>
-            this.forceUpdate()
-        );
-    }
-    componentWillUnmount() {
-        this.unsubscribe();
+    activateGame() {
+        const { dispatch, coordinates } = this.props;
+        let coordinate = getRandomCoordinate(coordinates());
+        dispatch(resetScore())
+        dispatch(toggleGame());
+        dispatch(updateCoordinate(coordinate));
     }
 
-    activateGame(store) {
-        const props = this.props;
-        let coordinate = getRandomCoordinate(props.coordinates());
-        store.dispatch(resetScore())
-        store.dispatch(toggleGame());
-        store.dispatch(updateCoordinate(coordinate));
-    }
-
-    deactivateGame(store, timeout) {
+    deactivateGame(timeout) {
+        const { dispatch } = this.props;
         setTimeout(() => {
-            store.dispatch(toggleGame())
-            store.dispatch(resetCoordinate())
+            dispatch(toggleGame())
+            dispatch(resetCoordinate())
         }, timeout)
     }
 
     render() {
-        const { store } = this.context;
-        const state = store.getState();
-        let disabled = state.game.active ? 'disabled' : ''
+        const { active } = this.props;
+        let disabled = active ? 'disabled' : ''
         return (
             <div>
                 <button
                     disabled={disabled}
                     className={'button button__start'}
                     onClick={(e) => {
-                        this.activateGame(store)
-                        this.deactivateGame(store, 30000)
+                        this.activateGame()
+                        this.deactivateGame(30000)
                     }}
                 >
                     Start
@@ -50,8 +40,5 @@ class StartButton extends Component {
         );
     }
 }
-StartButton.contextTypes = {
-    store: PropTypes.object
-};
 
 export default StartButton;

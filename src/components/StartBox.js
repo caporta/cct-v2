@@ -1,13 +1,13 @@
 import React from 'react';
 
-import StartButton from './StartButton';
+import StartContainer from '../containers/StartContainer';
 
 
 const StartBox = ({ coordinates }) => (
     <div
         className={'box box__start'}
     >
-        <StartButton coordinates={coordinates} />
+        <StartContainer coordinates={coordinates} />
     </div>
 );
 
