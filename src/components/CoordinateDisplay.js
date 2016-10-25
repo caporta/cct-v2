@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
 
 const CoordinateDisplay = ({ coordinate }) => (
@@ -6,5 +6,9 @@ const CoordinateDisplay = ({ coordinate }) => (
         {coordinate}
     </div>
 );
+
+CoordinateDisplay.propTypes = {
+    coordinate: PropTypes.string.isRequired
+};
 
 export default CoordinateDisplay;

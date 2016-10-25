@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
 
 const ScoreDisplay = ({ active, score }) => {
@@ -8,6 +8,10 @@ const ScoreDisplay = ({ active, score }) => {
             {finalScore}
         </div>
     );
+};
+
+ScoreDisplay.propTypes = {
+    active: PropTypes.bool.isRequired
 };
 
 export default ScoreDisplay;

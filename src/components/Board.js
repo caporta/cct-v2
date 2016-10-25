@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
 import SquareContainer from '../containers/SquareContainer';
 
@@ -16,5 +16,9 @@ const Board = ({ coordinates }) => (
             )}
         </div>
 );
+
+Board.propTypes = {
+    coordinates: PropTypes.array.isRequired
+};
 
 export default Board;

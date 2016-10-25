@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 
 import Board from '../components/Board';
@@ -21,6 +21,11 @@ class BoardContainer extends Component {
         );
     }
 }
+
+BoardContainer.propTypes = {
+    side: PropTypes.string.isRequired,
+    coordinates: PropTypes.func.isRequired
+};
 
 const mapStateToProps = (state) => ({
     side: state.side

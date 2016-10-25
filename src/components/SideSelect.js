@@ -1,5 +1,4 @@
-import React from 'react';
-
+import React, { PropTypes } from 'react';
 
 
 const SideSelect = ({ active, sides, onChange }) => {
@@ -24,6 +23,12 @@ const SideSelect = ({ active, sides, onChange }) => {
             </select>
         </div>
     );
+};
+
+SideSelect.propTypes = {
+    active: PropTypes.bool.isRequired,
+    sides: PropTypes.func.isRequired,
+    onChange: PropTypes.func.isRequired
 };
 
 export default SideSelect;

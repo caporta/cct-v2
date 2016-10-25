@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 
 
 class Square extends Component {
@@ -40,5 +40,12 @@ class Square extends Component {
         );
     }
 }
+
+Square.propTypes = {
+    match: PropTypes.bool.isRequired,
+    id: PropTypes.string.isRequired,
+    active: PropTypes.bool.isRequired,
+    onClick: PropTypes.func.isRequired
+};
 
 export default Square;

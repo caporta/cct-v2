@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
@@ -40,6 +40,12 @@ class StartContainer extends Component {
         );
     }
 }
+
+StartContainer.propTypes = {
+    active: PropTypes.bool.isRequired,
+    coordinates: PropTypes.func.isRequired,
+    actions: PropTypes.object.isRequired
+};
 
 const mapStateToProps = (state) => ({
     active: state.game.active

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
 
 const ThemeSelect = ({ themes }) => (
@@ -10,5 +10,9 @@ const ThemeSelect = ({ themes }) => (
         </select>
     </div>
 );
+
+ThemeSelect.propTypes = {
+    themes: PropTypes.func.isRequired
+};
 
 export default ThemeSelect;

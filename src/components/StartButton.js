@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
 
 const StartButton = ({ disabled, onClick }) => (
@@ -14,5 +14,10 @@ const StartButton = ({ disabled, onClick }) => (
         </button>
     </div>
 )
+
+StartButton.propTypes = {
+    disabled: PropTypes.string.isRequired,
+    onClick: PropTypes.func.isRequired
+};
 
 export default StartButton;
