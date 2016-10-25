@@ -293,7 +293,7 @@ Piece Styles
 }
 
 @keyframes show-correct {
-    5% {
+    0% {
         box-shadow: inset 0 0 0 6px green;
     }
     100% {
@@ -302,7 +302,7 @@ Piece Styles
 }
 
 @keyframes show-incorrect {
-    5% {
+    0% {
         box-shadow: inset 0 0 0 6px red;
     }
     100% {

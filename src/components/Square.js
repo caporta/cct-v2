@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
 
-import { updateCoordinate, incrementScore } from '../actions/index';
-import { getRandomCoordinate } from '../utilities/index';
-
 
 class Square extends Component {
     constructor(props) {
@@ -19,24 +16,17 @@ class Square extends Component {
         , timeout)
     }
 
-    getMatch() {
-        const { id, coordinate } = this.props;
-        return id == coordinate;
-    }
-
     render() {
-        const { id, coordinates, active, dispatch } = this.props;
+        const { match, id, active, onClick } = this.props;
         const localState = this.state;
-        let coordinate = getRandomCoordinate(coordinates);
         return(
             <div
                 className={localState.className}
                 id={id}
                 onClick={(e) => {
                     if (active) {
-                        if (this.getMatch()) {
-                            dispatch(updateCoordinate(coordinate))
-                            dispatch(incrementScore());
+                        if (match) {
+                            onClick();
                             this.setState({ className: localState.className + ' correct'});
                         } else {
                             this.setState({ className: localState.className + ' incorrect'});
