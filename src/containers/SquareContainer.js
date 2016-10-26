@@ -4,7 +4,6 @@ import { bindActionCreators } from 'redux';
 
 import Square from '../components/Square';
 import * as actionCreators from '../actions/index';
-import { getRandomCoordinate } from '../utilities/index';
 
 
 class SquareContainer extends Component {
@@ -15,8 +14,7 @@ class SquareContainer extends Component {
 
     handleClick() {
         const { coordinates, actions } = this.props;
-        let coordinate = getRandomCoordinate(coordinates);
-        actions.updateCoordinate(coordinate);
+        actions.updateCoordinate(coordinates);
         actions.incrementScore();
     }
 

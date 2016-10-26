@@ -4,16 +4,14 @@ import { bindActionCreators } from 'redux';
 
 import StartButton from '../components/StartButton';
 import * as actionCreators from '../actions/index';
-import { getRandomCoordinate } from '../utilities/index';
 
 
 class StartContainer extends Component {
     activateGame() {
         const { coordinates, actions } = this.props;
-        let coordinate = getRandomCoordinate(coordinates());
         actions.resetScore();
         actions.toggleGame();
-        actions.updateCoordinate(coordinate)
+        actions.updateCoordinate(coordinates())
     }
 
     deactivateGame(timeout) {
