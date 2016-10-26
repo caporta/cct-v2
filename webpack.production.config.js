@@ -6,9 +6,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 
 module.exports = {
-    devtool: 'eval-source-map',
     entry: [
-        'webpack-hot-middleware/client?reload=true',
         path.join(__dirname, 'src/index.js')
     ],
     output: {
@@ -21,8 +19,7 @@ module.exports = {
             hash: true,
             filename: 'index.html',
             template: 'src/index.html'
-        }),
-        new webpack.HotModuleReplacementPlugin()
+        })
     ],
     module: {
         loaders: [
