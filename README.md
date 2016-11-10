@@ -1,7 +1,7 @@
 #Chessboard Coordinate Trainer (React+Redux)
 
 ## Play Now
-> Play now at [chess.chrisaporta.com](http://chess.chrisaporta.com)
+> Play now at [chess.chrisaporta.com](http://chess.chrisaporta.com)!
 
 ## Overview
 
