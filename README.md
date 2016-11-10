@@ -1,7 +1,7 @@
 #Chessboard Coordinate Trainer (React+Redux)
 
 ## Play Now
-> [chess.chrisaporta.com](http://chess.chrisaporta.com). Enjoy!
+> Play now at [chess.chrisaporta.com](http://chess.chrisaporta.com)
 
 ## Overview
 
@@ -19,3 +19,4 @@
 > shown one random coordinate at a time, and your job is to click
 > on its corresponding square.
 > Each game lasts 30 seconds, and tallies your correct answers.
+> Enjoy!
